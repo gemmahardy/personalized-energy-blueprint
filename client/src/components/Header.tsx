@@ -11,8 +11,8 @@ export function Header() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <Link href="/" data-testid="link-home">
-              <a className="flex items-center gap-3 hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-all">
+            <Link href="/">
+              <a className="flex items-center gap-3 hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-all" data-testid="link-home">
                 <img 
                   src={logoUrl} 
                   alt="The Energy Lifestyle Company" 
@@ -23,28 +23,26 @@ export function Header() {
             </Link>
             
             <nav className="flex items-center gap-2">
-              <Link href="/">
-                <Button 
-                  variant={location === "/" ? "default" : "ghost"} 
-                  size="sm"
-                  data-testid="button-nav-home"
-                  className="gap-2"
-                >
-                  <Home className="h-4 w-4" />
-                  <span className="hidden sm:inline">Dashboard</span>
-                </Button>
-              </Link>
-              <Link href="/days">
-                <Button 
-                  variant={location.startsWith("/day") ? "default" : "ghost"} 
-                  size="sm"
-                  data-testid="button-nav-days"
-                  className="gap-2"
-                >
-                  <Calendar className="h-4 w-4" />
-                  <span className="hidden sm:inline">Days</span>
-                </Button>
-              </Link>
+              <Button 
+                variant={location === "/" ? "default" : "ghost"} 
+                size="sm"
+                onClick={() => window.location.href = "/"}
+                data-testid="button-nav-home"
+                className="gap-2"
+              >
+                <Home className="h-4 w-4" />
+                <span className="hidden sm:inline">Dashboard</span>
+              </Button>
+              <Button 
+                variant={location.startsWith("/day") ? "default" : "ghost"} 
+                size="sm"
+                onClick={() => window.location.href = "/days"}
+                data-testid="button-nav-days"
+                className="gap-2"
+              >
+                <Calendar className="h-4 w-4" />
+                <span className="hidden sm:inline">Days</span>
+              </Button>
             </nav>
           </div>
           

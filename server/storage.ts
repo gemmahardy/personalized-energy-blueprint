@@ -1,37 +1,52 @@
-import { type User, type InsertUser } from "@shared/schema";
+import { type DailyChecklistItem, type InsertDailyChecklistItem } from "@shared/schema";
 import { randomUUID } from "crypto";
 
-// modify the interface with any CRUD methods
-// you might need
-
 export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
+  getChecklistItems(): Promise<DailyChecklistItem[]>;
+  getChecklistItemsByDay(day: number): Promise<DailyChecklistItem[]>;
+  toggleChecklistItem(taskId: string, day: number, completed: boolean): Promise<DailyChecklistItem>;
 }
 
 export class MemStorage implements IStorage {
-  private users: Map<string, User>;
+  private checklistItems: Map<string, DailyChecklistItem>;
 
   constructor() {
-    this.users = new Map();
+    this.checklistItems = new Map();
   }
 
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+  async getChecklistItems(): Promise<DailyChecklistItem[]> {
+    return Array.from(this.checklistItems.values());
   }
 
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
+  async getChecklistItemsByDay(day: number): Promise<DailyChecklistItem[]> {
+    return Array.from(this.checklistItems.values()).filter(
+      (item) => item.day === day
     );
   }
 
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
+  async toggleChecklistItem(
+    taskId: string,
+    day: number,
+    completed: boolean
+  ): Promise<DailyChecklistItem> {
+    const key = `${day}-${taskId}`;
+    let item = this.checklistItems.get(key);
+    
+    if (!item) {
+      const id = randomUUID();
+      item = {
+        id,
+        day,
+        taskId,
+        completed,
+      };
+      this.checklistItems.set(key, item);
+    } else {
+      item.completed = completed;
+      this.checklistItems.set(key, item);
+    }
+    
+    return item;
   }
 }
 

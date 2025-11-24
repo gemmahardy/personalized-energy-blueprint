@@ -11,16 +11,18 @@ export function Header() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <Link href="/">
-              <a className="flex items-center gap-3 hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-all" data-testid="link-home">
-                <img 
-                  src={logoUrl} 
-                  alt="The Energy Lifestyle Company" 
-                  className="h-10 w-auto"
-                  data-testid="img-header-logo"
-                />
-              </a>
-            </Link>
+            <button 
+              onClick={() => window.location.href = "/"}
+              className="flex items-center gap-3 hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-all bg-transparent border-0 cursor-pointer" 
+              data-testid="button-home-logo"
+            >
+              <img 
+                src={logoUrl} 
+                alt="The Energy Lifestyle Company" 
+                className="h-10 w-auto"
+                data-testid="img-header-logo"
+              />
+            </button>
             
             <nav className="flex items-center gap-2">
               <Button 

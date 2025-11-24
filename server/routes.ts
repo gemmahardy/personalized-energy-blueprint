@@ -9,6 +9,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const items = await storage.getChecklistItems();
       res.json(items);
     } catch (error) {
+      console.error("Error fetching checklist items:", error);
       res.status(500).json({ error: "Failed to fetch checklist items" });
     }
   });

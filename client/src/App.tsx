@@ -9,6 +9,7 @@ import Dashboard from "@/pages/Dashboard";
 import WeekView from "@/pages/WeekView";
 import DayView from "@/pages/DayView";
 import AllDaysView from "@/pages/AllDaysView";
+import AnalyticsView from "@/pages/AnalyticsView";
 import CompletionPage from "@/pages/CompletionPage";
 import NotFound from "@/pages/not-found";
 
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/week/:weekNumber" component={WeekView} />
       <Route path="/day/:day" component={DayView} />
       <Route path="/days" component={AllDaysView} />
+      <Route path="/analytics" component={AnalyticsView} />
       <Route path="/completion" component={CompletionPage} />
       <Route component={NotFound} />
     </Switch>

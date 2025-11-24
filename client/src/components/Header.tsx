@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Calendar, Home, Trophy } from "lucide-react";
+import { Calendar, Home, BarChart3 } from "lucide-react";
 import logoUrl from "@assets/image_1764022595591.png";
 
 export function Header() {
@@ -43,7 +43,17 @@ export function Header() {
                 className="gap-2"
               >
                 <Calendar className="h-4 w-4" />
-                <span className="hidden sm:inline">Days</span>
+                <span className="hidden sm:inline">Calendar</span>
+              </Button>
+              <Button 
+                variant={location === "/analytics" ? "default" : "ghost"} 
+                size="sm"
+                onClick={() => window.location.href = "/analytics"}
+                data-testid="button-nav-analytics"
+                className="gap-2"
+              >
+                <BarChart3 className="h-4 w-4" />
+                <span className="hidden sm:inline">Analytics</span>
               </Button>
             </nav>
           </div>

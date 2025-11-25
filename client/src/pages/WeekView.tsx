@@ -2,9 +2,15 @@ import { useParams, useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DayCard } from "@/components/DayCard";
-import { ArrowLeft, Calendar } from "lucide-react";
+import { WeeklyMealPlan } from "@/components/WeeklyMealPlan";
+import { GroceryList } from "@/components/GroceryList";
+import { DailyRoutines } from "@/components/DailyRoutines";
+import { ExercisePlan } from "@/components/ExercisePlan";
+import { ArrowLeft, Calendar, Utensils, ShoppingCart, Sunrise, Dumbbell, CheckSquare } from "lucide-react";
 import { getWeekSummary, getWeekDays } from "@shared/programData";
+import { getWeeklyPlan } from "@shared/weeklyPlanData";
 import type { DailyChecklistItem } from "@shared/schema";
 
 export default function WeekView() {
@@ -18,6 +24,7 @@ export default function WeekView() {
   
   const weekSummary = getWeekSummary(weekNumber);
   const weekDays = getWeekDays(weekNumber);
+  const weekPlan = getWeeklyPlan(weekNumber);
   
   if (!weekSummary) {
     return (
@@ -45,14 +52,14 @@ export default function WeekView() {
       <Button
         variant="ghost"
         onClick={() => setLocation("/")}
-        className="gap-2"
+        className="gap-2 print:hidden"
         data-testid="button-back-dashboard"
       >
         <ArrowLeft className="h-4 w-4" />
         Back to Dashboard
       </Button>
       
-      <Card className="border-primary/20">
+      <Card className="border-primary/20 print:hidden">
         <CardHeader>
           <div className="flex items-center gap-3 mb-2">
             <Calendar className="h-6 w-6 text-primary" />
@@ -83,22 +90,89 @@ export default function WeekView() {
         </CardContent>
       </Card>
       
-      <div>
-        <h2 className="text-xl font-bold text-foreground mb-4" data-testid="text-days-title">
-          Daily Progress
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {weekDays.map((day) => (
-            <DayCard
-              key={day.day}
-              day={day.day}
-              week={day.week}
-              isCompleted={isDayCompleted(day.day)}
-              isCurrent={day.day === currentDay}
-            />
-          ))}
-        </div>
-      </div>
+      <Tabs defaultValue="progress" className="w-full">
+        <TabsList className="grid w-full grid-cols-5 print:hidden" data-testid="tabs-week-view">
+          <TabsTrigger value="progress" className="gap-1 text-xs sm:text-sm" data-testid="tab-progress">
+            <CheckSquare className="h-4 w-4" />
+            <span className="hidden sm:inline">Progress</span>
+          </TabsTrigger>
+          <TabsTrigger value="meals" className="gap-1 text-xs sm:text-sm" data-testid="tab-meals">
+            <Utensils className="h-4 w-4" />
+            <span className="hidden sm:inline">Meals</span>
+          </TabsTrigger>
+          <TabsTrigger value="grocery" className="gap-1 text-xs sm:text-sm" data-testid="tab-grocery">
+            <ShoppingCart className="h-4 w-4" />
+            <span className="hidden sm:inline">Grocery</span>
+          </TabsTrigger>
+          <TabsTrigger value="exercise" className="gap-1 text-xs sm:text-sm" data-testid="tab-exercise">
+            <Dumbbell className="h-4 w-4" />
+            <span className="hidden sm:inline">Exercise</span>
+          </TabsTrigger>
+          <TabsTrigger value="routines" className="gap-1 text-xs sm:text-sm" data-testid="tab-routines">
+            <Sunrise className="h-4 w-4" />
+            <span className="hidden sm:inline">Routines</span>
+          </TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="progress" className="mt-6">
+          <div>
+            <h2 className="text-xl font-bold text-foreground mb-4" data-testid="text-days-title">
+              Daily Progress
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {weekDays.map((day) => (
+                <DayCard
+                  key={day.day}
+                  day={day.day}
+                  week={day.week}
+                  isCompleted={isDayCompleted(day.day)}
+                  isCurrent={day.day === currentDay}
+                />
+              ))}
+            </div>
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="meals" className="mt-6">
+          {weekPlan ? (
+            <WeeklyMealPlan weekPlan={weekPlan} />
+          ) : (
+            <Card>
+              <CardContent className="pt-6 text-center">
+                <p className="text-muted-foreground">Meal plan data not available for this week.</p>
+              </CardContent>
+            </Card>
+          )}
+        </TabsContent>
+        
+        <TabsContent value="grocery" className="mt-6">
+          {weekPlan ? (
+            <GroceryList weekPlan={weekPlan} />
+          ) : (
+            <Card>
+              <CardContent className="pt-6 text-center">
+                <p className="text-muted-foreground">Grocery list not available for this week.</p>
+              </CardContent>
+            </Card>
+          )}
+        </TabsContent>
+        
+        <TabsContent value="exercise" className="mt-6">
+          <ExercisePlan weekNumber={weekNumber} />
+        </TabsContent>
+        
+        <TabsContent value="routines" className="mt-6">
+          {weekPlan ? (
+            <DailyRoutines weekPlan={weekPlan} />
+          ) : (
+            <Card>
+              <CardContent className="pt-6 text-center">
+                <p className="text-muted-foreground">Routine data not available for this week.</p>
+              </CardContent>
+            </Card>
+          )}
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }

@@ -44,6 +44,64 @@ export interface MealPlanDay {
   notes?: string;
 }
 
+export interface DetailedMeal {
+  name: string;
+  calories: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+  ingredients?: string[];
+  addedItems?: string[];
+}
+
+export interface DetailedDayMeals {
+  dayName: string;
+  totalCalories: number;
+  totalProtein: number;
+  breakfast: DetailedMeal;
+  lunch: DetailedMeal;
+  snack: DetailedMeal;
+  dinner: DetailedMeal;
+}
+
+export interface GroceryCategory {
+  name: string;
+  items: string[];
+}
+
+export interface WeeklyGroceryList {
+  proteins: string[];
+  carbsGrains: string[];
+  fruits: string[];
+  vegetables: string[];
+  pantry: string[];
+}
+
+export interface DailyRoutine {
+  morning: RoutineStep[];
+  midday: RoutineStep[];
+  evening: RoutineStep[];
+}
+
+export interface RoutineStep {
+  action: string;
+  duration?: string;
+  details?: string;
+}
+
+export interface WeeklyPlanData {
+  weekNumber: number;
+  theme: string;
+  weeklyGoal: string;
+  dailyCaloriesRange: string;
+  dailyProteinRange: string;
+  dailyCarbsRange: string;
+  dailyVeggiesRange: string;
+  dailyMeals: DetailedDayMeals[];
+  groceryList: WeeklyGroceryList;
+  dailyRoutine: DailyRoutine;
+}
+
 export interface WorkoutDay {
   type: string;
   exercises: Exercise[];

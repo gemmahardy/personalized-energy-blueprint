@@ -8,7 +8,8 @@ import { WeeklyMealPlan } from "@/components/WeeklyMealPlan";
 import { GroceryList } from "@/components/GroceryList";
 import { DailyRoutines } from "@/components/DailyRoutines";
 import { ExercisePlan } from "@/components/ExercisePlan";
-import { ArrowLeft, Calendar, Utensils, ShoppingCart, Sunrise, Dumbbell, CheckSquare } from "lucide-react";
+import { WaterTracker } from "@/components/WaterTracker";
+import { ArrowLeft, Calendar, Utensils, ShoppingCart, Sunrise, Dumbbell, CheckSquare, Droplets } from "lucide-react";
 import { getWeekSummary, getWeekDays } from "@shared/programData";
 import { getWeeklyPlan } from "@shared/weeklyPlanData";
 import type { DailyChecklistItem } from "@shared/schema";
@@ -91,7 +92,7 @@ export default function WeekView() {
       </Card>
       
       <Tabs defaultValue="progress" className="w-full">
-        <TabsList className="grid w-full grid-cols-5 print:hidden" data-testid="tabs-week-view">
+        <TabsList className="grid w-full grid-cols-6 print:hidden" data-testid="tabs-week-view">
           <TabsTrigger value="progress" className="gap-1 text-xs sm:text-sm" data-testid="tab-progress">
             <CheckSquare className="h-4 w-4" />
             <span className="hidden sm:inline">Progress</span>
@@ -111,6 +112,10 @@ export default function WeekView() {
           <TabsTrigger value="routines" className="gap-1 text-xs sm:text-sm" data-testid="tab-routines">
             <Sunrise className="h-4 w-4" />
             <span className="hidden sm:inline">Routines</span>
+          </TabsTrigger>
+          <TabsTrigger value="water" className="gap-1 text-xs sm:text-sm" data-testid="tab-water">
+            <Droplets className="h-4 w-4" />
+            <span className="hidden sm:inline">Water</span>
           </TabsTrigger>
         </TabsList>
         
@@ -171,6 +176,10 @@ export default function WeekView() {
               </CardContent>
             </Card>
           )}
+        </TabsContent>
+        
+        <TabsContent value="water" className="mt-6">
+          <WaterTracker weekNumber={weekNumber} />
         </TabsContent>
       </Tabs>
     </div>

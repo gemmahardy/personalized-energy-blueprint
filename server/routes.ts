@@ -47,6 +47,48 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/water", async (req, res) => {
+    try {
+      const items = await storage.getWaterIntake();
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching water intake:", error);
+      res.status(500).json({ error: "Failed to fetch water intake data" });
+    }
+  });
+
+  app.get("/api/water/week/:week", async (req, res) => {
+    try {
+      const week = parseInt(req.params.week);
+      if (isNaN(week) || week < 1 || week > 4) {
+        return res.status(400).json({ error: "Invalid week number" });
+      }
+      
+      const items = await storage.getWaterIntakeByWeek(week);
+      res.json(items);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch water intake for week" });
+    }
+  });
+
+  app.post("/api/water/update", async (req, res) => {
+    try {
+      const schema = z.object({
+        day: z.number().int().min(1).max(30),
+        glasses: z.number().int().min(0).max(16),
+      });
+      
+      const { day, glasses } = schema.parse(req.body);
+      const item = await storage.updateWaterIntake(day, glasses);
+      res.json(item);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Invalid request data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to update water intake" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

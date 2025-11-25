@@ -122,3 +122,17 @@ export interface WeekSummary {
   theme: string;
   goals: string[];
 }
+
+// Water intake tracking
+export const waterIntake = pgTable("water_intake", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  day: integer("day").notNull(), // 1-30
+  glasses: integer("glasses").notNull().default(0), // number of glasses (8oz each)
+});
+
+export const insertWaterIntakeSchema = createInsertSchema(waterIntake).omit({
+  id: true,
+});
+
+export type InsertWaterIntake = z.infer<typeof insertWaterIntakeSchema>;
+export type WaterIntake = typeof waterIntake.$inferSelect;

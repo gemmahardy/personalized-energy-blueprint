@@ -1,5 +1,5 @@
 import logoUrl from "@assets/image_1764022595591.png";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, ShoppingBag } from "lucide-react";
 
 export function Footer() {
   return (
@@ -24,17 +24,35 @@ export function Footer() {
             className="h-12 w-auto"
             data-testid="img-footer-logo"
           />
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground" data-testid="text-support-label">
-              Support
-            </p>
-            <a 
-              href="mailto:sunshine@theenergylifestyle.com"
-              className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-block"
-              data-testid="link-support-email"
-            >
-              sunshine@theenergylifestyle.com
-            </a>
+          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground" data-testid="text-support-label">
+                Support
+              </p>
+              <a 
+                href="mailto:sunshine@theenergylifestyle.com"
+                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-block"
+                data-testid="link-support-email"
+              >
+                sunshine@theenergylifestyle.com
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground" data-testid="text-shop-label">
+                Want More Support?
+              </p>
+              <a 
+                href="https://www.theenergylifestyle.com/shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-flex items-center gap-2"
+                data-testid="link-shop"
+              >
+                <ShoppingBag className="h-4 w-4" />
+                Shop Materials & Coaching
+              </a>
+            </div>
           </div>
           <p className="text-xs text-muted-foreground" data-testid="text-copyright">
             © {new Date().getFullYear()} The Energy Lifestyle Company. All rights reserved.

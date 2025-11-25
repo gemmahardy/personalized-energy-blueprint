@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Trophy, Sparkles, ExternalLink, UserPlus, ShoppingCart } from "lucide-react";
+import { Trophy, Sparkles, ExternalLink, UserPlus, ShoppingCart, Share2 } from "lucide-react";
+import { SiFacebook, SiX, SiLinkedin, SiPinterest } from "react-icons/si";
 import { programDays } from "@shared/programData";
 import type { DailyChecklistItem } from "@shared/schema";
 import { useEffect } from "react";
@@ -176,6 +177,104 @@ export default function CompletionPage() {
             <p className="text-sm text-muted-foreground">
               — The Energy Lifestyle Company
             </p>
+          </div>
+        </CardContent>
+      </Card>
+      
+      <Card className="border-primary/20">
+        <CardContent className="p-8 space-y-6">
+          <div className="text-center space-y-2">
+            <div className="flex justify-center mb-4">
+              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <Share2 className="h-6 w-6 text-primary" />
+              </div>
+            </div>
+            <h2 className="text-2xl font-bold text-foreground" data-testid="text-share-header">
+              Share Your Achievement!
+            </h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">
+              Inspire others by sharing your 30-day transformation. Let your friends and family know about your incredible journey!
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button
+              variant="outline"
+              className="gap-2 bg-[#1877F2] hover:bg-[#1877F2]/90 text-white border-[#1877F2] hover:text-white"
+              onClick={() => {
+                const shareText = encodeURIComponent("I just completed my 30-day Personalized Energy Blueprint! Transform your energy and wellness journey too!");
+                const shareUrl = encodeURIComponent("https://www.theenergylifestyle.com/shop");
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${shareText}`, '_blank', 'width=600,height=400');
+              }}
+              data-testid="button-share-facebook"
+            >
+              <SiFacebook className="h-5 w-5" />
+              Facebook
+            </Button>
+            
+            <Button
+              variant="outline"
+              className="gap-2 bg-black hover:bg-black/90 text-white border-black hover:text-white"
+              onClick={() => {
+                const shareText = encodeURIComponent("I just completed my 30-day Personalized Energy Blueprint! Transform your energy and wellness journey too! #EnergyLifestyle #30DayChallenge #Wellness");
+                const shareUrl = encodeURIComponent("https://www.theenergylifestyle.com/shop");
+                window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, '_blank', 'width=600,height=400');
+              }}
+              data-testid="button-share-x"
+            >
+              <SiX className="h-5 w-5" />
+              X (Twitter)
+            </Button>
+            
+            <Button
+              variant="outline"
+              className="gap-2 bg-[#0A66C2] hover:bg-[#0A66C2]/90 text-white border-[#0A66C2] hover:text-white"
+              onClick={() => {
+                const shareUrl = encodeURIComponent("https://www.theenergylifestyle.com/shop");
+                const shareTitle = encodeURIComponent("I Completed My 30-Day Energy Blueprint!");
+                const shareSummary = encodeURIComponent("I just finished an incredible 30-day wellness transformation journey. Feeling energized and ready for more! Check out The Energy Lifestyle Company for your own transformation.");
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank', 'width=600,height=400');
+              }}
+              data-testid="button-share-linkedin"
+            >
+              <SiLinkedin className="h-5 w-5" />
+              LinkedIn
+            </Button>
+            
+            <Button
+              variant="outline"
+              className="gap-2 bg-[#E60023] hover:bg-[#E60023]/90 text-white border-[#E60023] hover:text-white"
+              onClick={() => {
+                const shareUrl = encodeURIComponent("https://www.theenergylifestyle.com/shop");
+                const description = encodeURIComponent("I completed my 30-day Personalized Energy Blueprint! Transform your wellness journey with The Energy Lifestyle Company. #EnergyLifestyle #Wellness #30DayChallenge");
+                window.open(`https://pinterest.com/pin/create/button/?url=${shareUrl}&description=${description}`, '_blank', 'width=600,height=400');
+              }}
+              data-testid="button-share-pinterest"
+            >
+              <SiPinterest className="h-5 w-5" />
+              Pinterest
+            </Button>
+          </div>
+          
+          <div className="text-center pt-4 border-t border-border/50">
+            <p className="text-sm text-muted-foreground mb-3">
+              Or copy this link to share anywhere:
+            </p>
+            <div className="flex items-center justify-center gap-2 max-w-md mx-auto">
+              <code className="flex-1 px-4 py-2 bg-muted rounded-md text-sm text-foreground truncate">
+                https://www.theenergylifestyle.com/shop
+              </code>
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => {
+                  navigator.clipboard.writeText("I just completed my 30-day Personalized Energy Blueprint! Transform your energy and wellness journey too! https://www.theenergylifestyle.com/shop");
+                }}
+                data-testid="button-copy-link"
+              >
+                Copy
+              </Button>
+            </div>
           </div>
         </CardContent>
       </Card>

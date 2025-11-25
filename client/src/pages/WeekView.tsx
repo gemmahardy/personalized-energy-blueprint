@@ -92,30 +92,30 @@ export default function WeekView() {
       </Card>
       
       <Tabs defaultValue="progress" className="w-full">
-        <TabsList className="grid w-full grid-cols-6 print:hidden" data-testid="tabs-week-view">
-          <TabsTrigger value="progress" className="gap-1 text-xs sm:text-sm" data-testid="tab-progress">
+        <TabsList className="flex flex-wrap sm:grid sm:grid-cols-6 w-full gap-1 sm:gap-0 h-auto print:hidden" data-testid="tabs-week-view">
+          <TabsTrigger value="progress" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-progress">
             <CheckSquare className="h-4 w-4" />
-            <span className="hidden sm:inline">Progress</span>
+            <span className="hidden xs:inline sm:inline">Progress</span>
           </TabsTrigger>
-          <TabsTrigger value="meals" className="gap-1 text-xs sm:text-sm" data-testid="tab-meals">
+          <TabsTrigger value="meals" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-meals">
             <Utensils className="h-4 w-4" />
-            <span className="hidden sm:inline">Meals</span>
+            <span className="hidden xs:inline sm:inline">Meals</span>
           </TabsTrigger>
-          <TabsTrigger value="grocery" className="gap-1 text-xs sm:text-sm" data-testid="tab-grocery">
+          <TabsTrigger value="grocery" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-grocery">
             <ShoppingCart className="h-4 w-4" />
-            <span className="hidden sm:inline">Grocery</span>
+            <span className="hidden xs:inline sm:inline">Grocery</span>
           </TabsTrigger>
-          <TabsTrigger value="exercise" className="gap-1 text-xs sm:text-sm" data-testid="tab-exercise">
+          <TabsTrigger value="exercise" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-exercise">
             <Dumbbell className="h-4 w-4" />
-            <span className="hidden sm:inline">Exercise</span>
+            <span className="hidden xs:inline sm:inline">Exercise</span>
           </TabsTrigger>
-          <TabsTrigger value="routines" className="gap-1 text-xs sm:text-sm" data-testid="tab-routines">
+          <TabsTrigger value="routines" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-routines">
             <Sunrise className="h-4 w-4" />
-            <span className="hidden sm:inline">Routines</span>
+            <span className="hidden xs:inline sm:inline">Routines</span>
           </TabsTrigger>
-          <TabsTrigger value="water" className="gap-1 text-xs sm:text-sm" data-testid="tab-water">
+          <TabsTrigger value="water" className="flex-1 sm:flex-none gap-1 text-xs sm:text-sm px-2 sm:px-3 py-2" data-testid="tab-water">
             <Droplets className="h-4 w-4" />
-            <span className="hidden sm:inline">Water</span>
+            <span className="hidden xs:inline sm:inline">Water</span>
           </TabsTrigger>
         </TabsList>
         

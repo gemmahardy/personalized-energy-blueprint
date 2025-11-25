@@ -4,14 +4,14 @@ import { AlertTriangle, ShoppingBag } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t bg-card mt-auto">
-      <div className="container mx-auto px-6 py-8">
-        <div className="flex flex-col items-center gap-6">
-          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 max-w-2xl text-center" data-testid="disclaimer-box">
+      <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="flex flex-col items-center gap-4 sm:gap-6">
+          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-3 sm:p-4 max-w-2xl text-center mx-2" data-testid="disclaimer-box">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-              <span className="text-sm font-semibold text-amber-800 dark:text-amber-300">Disclaimer</span>
+              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-semibold text-amber-800 dark:text-amber-300">Disclaimer</span>
             </div>
-            <p className="text-xs text-amber-700 dark:text-amber-400" data-testid="text-disclaimer">
+            <p className="text-xs text-amber-700 dark:text-amber-400 leading-relaxed" data-testid="text-disclaimer">
               This program is for educational purposes only and is not intended as medical advice. 
               Please consult a licensed physician before making any changes to your diet, exercise routine, 
               or supplement regimen.
@@ -21,17 +21,17 @@ export function Footer() {
           <img 
             src={logoUrl} 
             alt="The Energy Lifestyle Company" 
-            className="h-12 w-auto"
+            className="h-10 sm:h-12 w-auto"
             data-testid="img-footer-logo"
           />
-          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-12 w-full sm:w-auto">
             <div className="text-center">
-              <p className="text-sm text-muted-foreground" data-testid="text-support-label">
+              <p className="text-xs sm:text-sm text-muted-foreground" data-testid="text-support-label">
                 Support
               </p>
               <a 
                 href="mailto:sunshine@theenergylifestyle.com"
-                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-block"
+                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-block text-sm sm:text-base break-all sm:break-normal"
                 data-testid="link-support-email"
               >
                 sunshine@theenergylifestyle.com
@@ -39,22 +39,22 @@ export function Footer() {
             </div>
             
             <div className="text-center">
-              <p className="text-sm text-muted-foreground" data-testid="text-shop-label">
+              <p className="text-xs sm:text-sm text-muted-foreground" data-testid="text-shop-label">
                 Want More Support?
               </p>
               <a 
                 href="https://www.theenergylifestyle.com/shop"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-flex items-center gap-2"
+                className="text-primary hover-elevate active-elevate-2 font-medium transition-colors px-2 py-1 rounded-md inline-flex items-center gap-2 text-sm sm:text-base"
                 data-testid="link-shop"
               >
-                <ShoppingBag className="h-4 w-4" />
-                Shop Materials & Coaching
+                <ShoppingBag className="h-4 w-4 flex-shrink-0" />
+                <span>Shop Materials & Coaching</span>
               </a>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground" data-testid="text-copyright">
+          <p className="text-xs text-muted-foreground text-center" data-testid="text-copyright">
             © {new Date().getFullYear()} The Energy Lifestyle Company. All rights reserved.
           </p>
         </div>

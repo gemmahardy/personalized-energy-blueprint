@@ -60,7 +60,10 @@ export const programDays: DayContent[] = [
       { id: "d1-2", label: "Complete breakfast from meal plan", category: "Nutrition" },
       { id: "d1-3", label: "10-minute morning stretch routine", category: "Movement" },
       { id: "d1-4", label: "Note your energy level (1-10) at 3pm", category: "Awareness" },
-      { id: "d1-5", label: "Prepare tomorrow's workout clothes", category: "Preparation" }
+      { id: "d1-5", label: "Prepare tomorrow's workout clothes", category: "Preparation" },
+      { id: "d1-6", label: "15-minute walk", category: "Movement" },
+      { id: "d1-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d1-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Energizing Berry Smoothie Bowl with chia seeds, almond butter, and granola",
@@ -94,7 +97,10 @@ export const programDays: DayContent[] = [
       { id: "d2-2", label: "Eat within 1 hour of waking", category: "Nutrition" },
       { id: "d2-3", label: "Complete today's workout", category: "Movement" },
       { id: "d2-4", label: "Take a 10-minute walk after lunch", category: "Movement" },
-      { id: "d2-5", label: "Evening wind-down: 5 min deep breathing", category: "Recovery" }
+      { id: "d2-5", label: "Evening wind-down: 5 min deep breathing", category: "Recovery" },
+      { id: "d2-6", label: "15-minute walk", category: "Movement" },
+      { id: "d2-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d2-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Overnight Oats with blueberries, walnuts, and cinnamon",
@@ -126,7 +132,10 @@ export const programDays: DayContent[] = [
       { id: "d3-2", label: "Balanced breakfast completed", category: "Nutrition" },
       { id: "d3-3", label: "Morning workout session", category: "Movement" },
       { id: "d3-4", label: "Track afternoon energy dip (if any)", category: "Awareness" },
-      { id: "d3-5", label: "Prepare healthy snacks for tomorrow", category: "Preparation" }
+      { id: "d3-5", label: "Prepare healthy snacks for tomorrow", category: "Preparation" },
+      { id: "d3-6", label: "15-minute walk", category: "Movement" },
+      { id: "d3-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d3-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Veggie Omelet with spinach, mushrooms, and feta cheese, side of whole grain toast",
@@ -160,7 +169,10 @@ export const programDays: DayContent[] = [
       { id: "d4-2", label: "Nutrient-dense breakfast", category: "Nutrition" },
       { id: "d4-3", label: "Complete cardio workout", category: "Movement" },
       { id: "d4-4", label: "Take 3 mindful breathing breaks", category: "Mindfulness" },
-      { id: "d4-5", label: "Bedtime by 10:30 PM", category: "Recovery" }
+      { id: "d4-5", label: "Bedtime by 10:30 PM", category: "Recovery" },
+      { id: "d4-6", label: "15-minute walk", category: "Movement" },
+      { id: "d4-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d4-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Green Power Smoothie with spinach, banana, protein powder, and almond milk",
@@ -194,7 +206,10 @@ export const programDays: DayContent[] = [
       { id: "d5-2", label: "Protein-rich breakfast", category: "Nutrition" },
       { id: "d5-3", label: "Full-body strength workout", category: "Movement" },
       { id: "d5-4", label: "Meal prep for weekend", category: "Preparation" },
-      { id: "d5-5", label: "Journal: What gave me energy this week?", category: "Reflection" }
+      { id: "d5-5", label: "Journal: What gave me energy this week?", category: "Reflection" },
+      { id: "d5-6", label: "15-minute walk", category: "Movement" },
+      { id: "d5-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d5-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Scrambled Eggs with smoked salmon, avocado, and whole grain toast",
@@ -228,7 +243,10 @@ export const programDays: DayContent[] = [
       { id: "d6-2", label: "Balanced weekend breakfast", category: "Nutrition" },
       { id: "d6-3", label: "Outdoor activity or workout", category: "Movement" },
       { id: "d6-4", label: "Try a new healthy recipe", category: "Exploration" },
-      { id: "d6-5", label: "Review Week 1 progress", category: "Reflection" }
+      { id: "d6-5", label: "Review Week 1 progress", category: "Reflection" },
+      { id: "d6-6", label: "15-minute walk", category: "Movement" },
+      { id: "d6-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d6-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Whole Grain Pancakes with fresh berries and pure maple syrup",
@@ -258,7 +276,10 @@ export const programDays: DayContent[] = [
       { id: "d7-2", label: "Nourishing meals all day", category: "Nutrition" },
       { id: "d7-3", label: "Active recovery session", category: "Movement" },
       { id: "d7-4", label: "Plan Week 2 goals", category: "Planning" },
-      { id: "d7-5", label: "Celebrate your Week 1 success!", category: "Celebration" }
+      { id: "d7-5", label: "Celebrate your Week 1 success!", category: "Celebration" },
+      { id: "d7-6", label: "15-minute walk", category: "Movement" },
+      { id: "d7-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d7-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Avocado Toast with poached eggs and microgreens",
@@ -290,7 +311,10 @@ export const programDays: DayContent[] = [
       { id: "d8-2", label: "Energizing breakfast", category: "Nutrition" },
       { id: "d8-3", label: "Interval training workout", category: "Movement" },
       { id: "d8-4", label: "Track energy peaks today", category: "Awareness" },
-      { id: "d8-5", label: "Evening mobility routine", category: "Recovery" }
+      { id: "d8-5", label: "Evening mobility routine", category: "Recovery" },
+      { id: "d8-6", label: "15-minute walk", category: "Movement" },
+      { id: "d8-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d8-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Protein Power Bowl with Greek yogurt, granola, nuts, and fresh fruit",
@@ -327,7 +351,10 @@ export const programDays: DayContent[] = [
       { id: "d9-2", label: "Balanced breakfast with protein", category: "Nutrition" },
       { id: "d9-3", label: "Strength training session", category: "Movement" },
       { id: "d9-4", label: "15-minute walk after dinner", category: "Movement" },
-      { id: "d9-5", label: "Prepare healthy lunch for tomorrow", category: "Preparation" }
+      { id: "d9-5", label: "Prepare healthy lunch for tomorrow", category: "Preparation" },
+      { id: "d9-6", label: "15-minute walk", category: "Movement" },
+      { id: "d9-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d9-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Spinach and Mushroom Frittata with whole grain toast",
@@ -360,7 +387,10 @@ export const programDays: DayContent[] = [
       { id: "d10-2", label: "Wholesome breakfast", category: "Nutrition" },
       { id: "d10-3", label: "Lower body workout", category: "Movement" },
       { id: "d10-4", label: "Practice stress-relief technique", category: "Mindfulness" },
-      { id: "d10-5", label: "Sleep prep: screens off by 9pm", category: "Recovery" }
+      { id: "d10-5", label: "Sleep prep: screens off by 9pm", category: "Recovery" },
+      { id: "d10-6", label: "15-minute walk", category: "Movement" },
+      { id: "d10-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d10-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Chia Pudding with almond milk, berries, and sliced almonds",
@@ -394,7 +424,10 @@ export const programDays: DayContent[] = [
       { id: "d11-2", label: "Energizing breakfast", category: "Nutrition" },
       { id: "d11-3", label: "Active recovery or yoga", category: "Movement" },
       { id: "d11-4", label: "Mindful eating - no screens", category: "Mindfulness" },
-      { id: "d11-5", label: "Evening gratitude journal", category: "Reflection" }
+      { id: "d11-5", label: "Evening gratitude journal", category: "Reflection" },
+      { id: "d11-6", label: "15-minute walk", category: "Movement" },
+      { id: "d11-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d11-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Banana Protein Pancakes with almond butter",
@@ -424,7 +457,10 @@ export const programDays: DayContent[] = [
       { id: "d12-2", label: "Nutrient-dense meals", category: "Nutrition" },
       { id: "d12-3", label: "Full body circuit workout", category: "Movement" },
       { id: "d12-4", label: "Take movement breaks every hour", category: "Movement" },
-      { id: "d12-5", label: "Reflect on energy improvements", category: "Awareness" }
+      { id: "d12-5", label: "Reflect on energy improvements", category: "Awareness" },
+      { id: "d12-6", label: "15-minute walk", category: "Movement" },
+      { id: "d12-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d12-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Smoothie Bowl with tropical fruits and coconut",
@@ -457,7 +493,10 @@ export const programDays: DayContent[] = [
       { id: "d13-2", label: "Power-packed breakfast", category: "Nutrition" },
       { id: "d13-3", label: "Cardio session", category: "Movement" },
       { id: "d13-4", label: "Try a new energizing recipe", category: "Nutrition" },
-      { id: "d13-5", label: "Evening stretch routine", category: "Recovery" }
+      { id: "d13-5", label: "Evening stretch routine", category: "Recovery" },
+      { id: "d13-6", label: "15-minute walk", category: "Movement" },
+      { id: "d13-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d13-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Veggie Scramble with sweet potato hash",
@@ -489,7 +528,10 @@ export const programDays: DayContent[] = [
       { id: "d14-2", label: "Favorite healthy breakfast", category: "Nutrition" },
       { id: "d14-3", label: "Choose your workout adventure", category: "Movement" },
       { id: "d14-4", label: "Week 2 reflection & wins", category: "Reflection" },
-      { id: "d14-5", label: "Set Week 3 intentions", category: "Planning" }
+      { id: "d14-5", label: "Set Week 3 intentions", category: "Planning" },
+      { id: "d14-6", label: "15-minute walk", category: "Movement" },
+      { id: "d14-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d14-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Your favorite healthy breakfast from Week 1 or 2",
@@ -520,7 +562,10 @@ export const programDays: DayContent[] = [
       { id: "d15-2", label: "Optimized breakfast timing", category: "Nutrition" },
       { id: "d15-3", label: "Peak performance workout", category: "Movement" },
       { id: "d15-4", label: "Identify your peak energy window", category: "Awareness" },
-      { id: "d15-5", label: "Advanced meal prep", category: "Preparation" }
+      { id: "d15-5", label: "Advanced meal prep", category: "Preparation" },
+      { id: "d15-6", label: "15-minute walk", category: "Movement" },
+      { id: "d15-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d15-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Power Smoothie with greens, protein, healthy fats",
@@ -551,7 +596,10 @@ export const programDays: DayContent[] = [
       { id: "d16-2", label: "Pre-workout nutrition", category: "Nutrition" },
       { id: "d16-3", label: "Strength & conditioning", category: "Movement" },
       { id: "d16-4", label: "Post-workout recovery meal", category: "Nutrition" },
-      { id: "d16-5", label: "Track performance improvements", category: "Awareness" }
+      { id: "d16-5", label: "Track performance improvements", category: "Awareness" },
+      { id: "d16-6", label: "15-minute walk", category: "Movement" },
+      { id: "d16-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d16-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Egg White Omelet with vegetables and avocado",
@@ -581,7 +629,10 @@ export const programDays: DayContent[] = [
       { id: "d17-2", label: "Intuitive eating practice", category: "Nutrition" },
       { id: "d17-3", label: "Mindful movement session", category: "Movement" },
       { id: "d17-4", label: "Stress resilience practice", category: "Mindfulness" },
-      { id: "d17-5", label: "Quality sleep optimization", category: "Recovery" }
+      { id: "d17-5", label: "Quality sleep optimization", category: "Recovery" },
+      { id: "d17-6", label: "15-minute walk", category: "Movement" },
+      { id: "d17-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d17-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Açai Bowl with superfoods",
@@ -611,7 +662,10 @@ export const programDays: DayContent[] = [
       { id: "d18-2", label: "Advanced nutrition strategies", category: "Nutrition" },
       { id: "d18-3", label: "High-intensity training", category: "Movement" },
       { id: "d18-4", label: "Energy optimization review", category: "Awareness" },
-      { id: "d18-5", label: "Recovery protocol", category: "Recovery" }
+      { id: "d18-5", label: "Recovery protocol", category: "Recovery" },
+      { id: "d18-6", label: "15-minute walk", category: "Movement" },
+      { id: "d18-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d18-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Performance Smoothie with all the good stuff",
@@ -641,7 +695,10 @@ export const programDays: DayContent[] = [
       { id: "d19-2", label: "Balanced nutrition day", category: "Nutrition" },
       { id: "d19-3", label: "Full body workout", category: "Movement" },
       { id: "d19-4", label: "Reflect on transformation", category: "Reflection" },
-      { id: "d19-5", label: "Prepare for Week 4", category: "Planning" }
+      { id: "d19-5", label: "Prepare for Week 4", category: "Planning" },
+      { id: "d19-6", label: "15-minute walk", category: "Movement" },
+      { id: "d19-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d19-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "High-protein breakfast of choice",
@@ -671,7 +728,10 @@ export const programDays: DayContent[] = [
       { id: "d20-2", label: "Wholesome meals", category: "Nutrition" },
       { id: "d20-3", label: "Active recovery", category: "Movement" },
       { id: "d20-4", label: "Gratitude practice", category: "Mindfulness" },
-      { id: "d20-5", label: "Self-care ritual", category: "Recovery" }
+      { id: "d20-5", label: "Self-care ritual", category: "Recovery" },
+      { id: "d20-6", label: "15-minute walk", category: "Movement" },
+      { id: "d20-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d20-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Nutrient-dense breakfast bowl",
@@ -700,7 +760,10 @@ export const programDays: DayContent[] = [
       { id: "d21-2", label: "Favorite nourishing meals", category: "Nutrition" },
       { id: "d21-3", label: "Joyful movement", category: "Movement" },
       { id: "d21-4", label: "Week 3 wins celebration", category: "Celebration" },
-      { id: "d21-5", label: "Final week intentions", category: "Planning" }
+      { id: "d21-5", label: "Final week intentions", category: "Planning" },
+      { id: "d21-6", label: "15-minute walk", category: "Movement" },
+      { id: "d21-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d21-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Your signature energy breakfast",
@@ -731,7 +794,10 @@ export const programDays: DayContent[] = [
       { id: "d22-2", label: "Meal plan for longevity", category: "Nutrition" },
       { id: "d22-3", label: "Enjoyable workout", category: "Movement" },
       { id: "d22-4", label: "Document energy improvements", category: "Reflection" },
-      { id: "d22-5", label: "Plan post-program routine", category: "Planning" }
+      { id: "d22-5", label: "Plan post-program routine", category: "Planning" },
+      { id: "d22-6", label: "15-minute walk", category: "Movement" },
+      { id: "d22-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d22-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Sustainable breakfast you'll make forever",
@@ -760,7 +826,10 @@ export const programDays: DayContent[] = [
       { id: "d23-2", label: "Intuitive balanced eating", category: "Nutrition" },
       { id: "d23-3", label: "Movement you love", category: "Movement" },
       { id: "d23-4", label: "Share your journey", category: "Connection" },
-      { id: "d23-5", label: "Recovery excellence", category: "Recovery" }
+      { id: "d23-5", label: "Recovery excellence", category: "Recovery" },
+      { id: "d23-6", label: "15-minute walk", category: "Movement" },
+      { id: "d23-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d23-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Energizing start",
@@ -789,7 +858,10 @@ export const programDays: DayContent[] = [
       { id: "d24-2", label: "Nourishing all meals", category: "Nutrition" },
       { id: "d24-3", label: "Strong workout", category: "Movement" },
       { id: "d24-4", label: "Visualize your future energy", category: "Mindfulness" },
-      { id: "d24-5", label: "Gratitude for your body", category: "Reflection" }
+      { id: "d24-5", label: "Gratitude for your body", category: "Reflection" },
+      { id: "d24-6", label: "15-minute walk", category: "Movement" },
+      { id: "d24-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d24-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Power breakfast",
@@ -818,7 +890,10 @@ export const programDays: DayContent[] = [
       { id: "d25-2", label: "Balanced nutrition day", category: "Nutrition" },
       { id: "d25-3", label: "Full energy workout", category: "Movement" },
       { id: "d25-4", label: "Plan your maintenance routine", category: "Planning" },
-      { id: "d25-5", label: "Celebrate non-scale victories", category: "Celebration" }
+      { id: "d25-5", label: "Celebrate non-scale victories", category: "Celebration" },
+      { id: "d25-6", label: "15-minute walk", category: "Movement" },
+      { id: "d25-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d25-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Your go-to energy meal",
@@ -847,7 +922,10 @@ export const programDays: DayContent[] = [
       { id: "d26-2", label: "Wholesome eating", category: "Nutrition" },
       { id: "d26-3", label: "Energizing movement", category: "Movement" },
       { id: "d26-4", label: "Reflect on all you've learned", category: "Reflection" },
-      { id: "d26-5", label: "Plan next 30 days", category: "Planning" }
+      { id: "d26-5", label: "Plan next 30 days", category: "Planning" },
+      { id: "d26-6", label: "15-minute walk", category: "Movement" },
+      { id: "d26-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d26-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Energizing choice",
@@ -877,7 +955,10 @@ export const programDays: DayContent[] = [
       { id: "d27-2", label: "Nourishing meals", category: "Nutrition" },
       { id: "d27-3", label: "Joyful movement", category: "Movement" },
       { id: "d27-4", label: "Write your transformation story", category: "Reflection" },
-      { id: "d27-5", label: "Self-care ritual", category: "Recovery" }
+      { id: "d27-5", label: "Self-care ritual", category: "Recovery" },
+      { id: "d27-6", label: "15-minute walk", category: "Movement" },
+      { id: "d27-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d27-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Perfect energy start",
@@ -906,7 +987,10 @@ export const programDays: DayContent[] = [
       { id: "d28-2", label: "Balanced, wholesome eating", category: "Nutrition" },
       { id: "d28-3", label: "Strong workout", category: "Movement" },
       { id: "d28-4", label: "Before/after reflection", category: "Reflection" },
-      { id: "d28-5", label: "Share your wins", category: "Celebration" }
+      { id: "d28-5", label: "Share your wins", category: "Celebration" },
+      { id: "d28-6", label: "15-minute walk", category: "Movement" },
+      { id: "d28-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d28-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Powerhouse breakfast",
@@ -935,7 +1019,10 @@ export const programDays: DayContent[] = [
       { id: "d29-2", label: "Celebratory healthy eating", category: "Nutrition" },
       { id: "d29-3", label: "Energizing workout", category: "Movement" },
       { id: "d29-4", label: "Prep for Day 30 celebration", category: "Planning" },
-      { id: "d29-5", label: "Gratitude meditation", category: "Mindfulness" }
+      { id: "d29-5", label: "Gratitude meditation", category: "Mindfulness" },
+      { id: "d29-6", label: "15-minute walk", category: "Movement" },
+      { id: "d29-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d29-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Championship breakfast",
@@ -964,7 +1051,10 @@ export const programDays: DayContent[] = [
       { id: "d30-2", label: "Celebration nutrition", category: "Nutrition" },
       { id: "d30-3", label: "Victorious final workout", category: "Movement" },
       { id: "d30-4", label: "Complete 30-day reflection", category: "Reflection" },
-      { id: "d30-5", label: "CELEBRATE YOUR ACHIEVEMENT!", category: "Celebration" }
+      { id: "d30-5", label: "CELEBRATE YOUR ACHIEVEMENT!", category: "Celebration" },
+      { id: "d30-6", label: "15-minute walk", category: "Movement" },
+      { id: "d30-7", label: "Morning sunlight exposure (5-10 min)", category: "Wellness" },
+      { id: "d30-8", label: "10-minute meditation or gratitude journaling", category: "Mindfulness" }
     ],
     mealPlan: {
       breakfast: "Your ultimate energy breakfast",
